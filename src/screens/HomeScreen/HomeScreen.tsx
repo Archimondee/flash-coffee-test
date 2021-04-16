@@ -1,5 +1,7 @@
-import * as React from 'react';
-import {Text, View, StyleSheet, ScrollView} from 'react-native';
+import HomeHeaderSection from 'components/molecules/HomeHeaderSection/HomeHeaderSection';
+import HomeOrganisms from 'components/organisms/HomeOrganisms/HomeOrganisms';
+import React from 'react';
+import {StyleSheet, ScrollView} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import globalStyles from 'styles/globalStyles';
 
@@ -7,21 +9,14 @@ interface HomeScreenProps {}
 
 const HomeScreen = (props: HomeScreenProps) => {
   return (
-    <SafeAreaView style={[globalStyles().container, {paddingHorizontal: 20}]}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            marginTop: 20,
-          }}>
-          <View style={{height: 50, width: 50, backgroundColor: 'red'}} />
-          <View style={{alignItems: 'center', justifyContent: 'center'}}>
-            <Text> LIVE ATTENDANCE</Text>
-          </View>
-          <View style={{height: 50, width: 50, backgroundColor: 'red'}} />
-        </View>
+    <SafeAreaView style={[globalStyles().container]}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{
+          backgroundColor: 'white',
+          marginBottom: -40,
+        }}>
+        <HomeOrganisms />
       </ScrollView>
     </SafeAreaView>
   );

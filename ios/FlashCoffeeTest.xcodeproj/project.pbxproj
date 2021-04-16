@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		61FE9D999A672CA37396C0E4 /* libPods-FlashCoffeeTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 675367570605F9BCDF7C0C04 /* libPods-FlashCoffeeTest.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F73B0BDB262A1FAC001B0AF9 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = F73B0BDA262A1FAB001B0AF9 /* Fonts */; };
+		F73B0C10262A1FCA001B0AF9 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = F73B0C0F262A1FCA001B0AF9 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		E08E91FB3F09C5527654A358 /* Pods-FlashCoffeeTest-FlashCoffeeTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashCoffeeTest-FlashCoffeeTestTests.release.xcconfig"; path = "Target Support Files/Pods-FlashCoffeeTest-FlashCoffeeTestTests/Pods-FlashCoffeeTest-FlashCoffeeTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		E32769158C469223CC9C1450 /* Pods-FlashCoffeeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashCoffeeTest.release.xcconfig"; path = "Target Support Files/Pods-FlashCoffeeTest/Pods-FlashCoffeeTest.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F73B0BDA262A1FAB001B0AF9 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
+		F73B0C0F262A1FCA001B0AF9 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		13B07FAE1A68108700A75B9A /* FlashCoffeeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F73B0C0F262A1FCA001B0AF9 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -114,7 +119,6 @@
 				8344BE830AE01F05488ADDEC /* Pods-FlashCoffeeTest-FlashCoffeeTestTests.debug.xcconfig */,
 				E08E91FB3F09C5527654A358 /* Pods-FlashCoffeeTest-FlashCoffeeTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +132,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F73B0BDA262A1FAB001B0AF9 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* FlashCoffeeTest */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* FlashCoffeeTestTests */,
@@ -243,8 +248,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73B0BDB262A1FAC001B0AF9 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F73B0C10262A1FCA001B0AF9 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
