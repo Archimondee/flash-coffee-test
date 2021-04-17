@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   },
   textAttendance: {
     fontSize: 16,
+    //fontFamily: 'Roboto',
     fontWeight: 'bold',
   },
 });

@@ -15,7 +15,12 @@ const HeaderAttendance = (props: HeaderAttendanceProps) => {
       <View style={styles.textAttendanceContainer}>
         <Text style={styles.textAttendance}>LIVE ATTENDANCE</Text>
       </View>
-      <Icon name="notifications-outline" size={45} color="black" />
+      <Icon
+        name="notifications-outline"
+        size={30}
+        color="black"
+        style={{alignSelf: 'center'}}
+      />
     </View>
   );
 };

@@ -1,7 +1,13 @@
 import HomeHeaderSection from 'components/molecules/HomeHeaderSection/HomeHeaderSection';
 import HomeOrganisms from 'components/organisms/HomeOrganisms/HomeOrganisms';
 import React from 'react';
-import {StyleSheet, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  ScrollView,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import globalStyles from 'styles/globalStyles';
 
