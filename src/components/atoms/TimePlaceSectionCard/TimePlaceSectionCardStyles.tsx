@@ -1,10 +1,13 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
-  buttonContainer: {
+  textPlace: {
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  containerComponent: {
     flexDirection: 'row',
-    padding: 20,
-    marginBottom: 80,
-    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: 5,
   },
 });
 

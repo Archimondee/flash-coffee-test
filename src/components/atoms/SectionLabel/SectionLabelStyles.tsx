@@ -1,10 +1,17 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
-  buttonContainer: {
+  container: {
     flexDirection: 'row',
-    padding: 20,
-    marginBottom: 80,
     justifyContent: 'space-between',
+    padding: 20,
+  },
+  leftText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  rightText: {
+    fontSize: 16,
+    color: '#fb3667',
   },
 });
 

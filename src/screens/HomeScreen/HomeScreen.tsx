@@ -1,22 +1,45 @@
 import HomeHeaderSection from 'components/molecules/HomeHeaderSection/HomeHeaderSection';
 import HomeOrganisms from 'components/organisms/HomeOrganisms/HomeOrganisms';
 import React from 'react';
-import {StyleSheet, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  ScrollView,
+  Text,
+  View,
+  TouchableOpacity,
+  ViewToken,
+  StatusBar,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import globalStyles from 'styles/globalStyles';
 
 interface HomeScreenProps {}
 
 const HomeScreen = (props: HomeScreenProps) => {
+  const schedule = [
+    {
+      day: 'Wednesday',
+      date: '7 Apr',
+    },
+    {
+      day: 'Thursday',
+      date: '8 Apr',
+    },
+    {
+      day: 'Friday',
+      date: '9 Apr',
+    },
+  ];
   return (
     <SafeAreaView style={[globalStyles().container]}>
+      <StatusBar backgroundColor={'#fbdd07'} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{
           backgroundColor: 'white',
           marginBottom: -40,
         }}>
-        <HomeOrganisms />
+        <HomeOrganisms dataSchedule={schedule} />
       </ScrollView>
     </SafeAreaView>
   );
