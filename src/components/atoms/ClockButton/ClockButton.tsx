@@ -18,7 +18,11 @@ const ClockButton = (props: ClockButtonProps) => {
       <Text style={styles().text}> {text} </Text>
     </TouchableOpacity>
   ) : (
-    <View />
+    <TouchableOpacity
+      onPress={position == 'left' ? onPressLeft : onPressRight}
+      style={styles(position).button}>
+      <Text style={styles().text}> {text} </Text>
+    </TouchableOpacity>
   );
 };
 

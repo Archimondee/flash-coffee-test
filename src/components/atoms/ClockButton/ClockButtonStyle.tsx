@@ -10,6 +10,13 @@ const styles = (position?: string) =>
       fontWeight: 'bold',
       color: 'white',
     },
+    button: {
+      paddingVertical: 20,
+      backgroundColor: position === 'left' ? '#04c4bc' : 'gray',
+      paddingHorizontal: '14%',
+
+      borderRadius: 7,
+    },
   });
 
 export default styles;

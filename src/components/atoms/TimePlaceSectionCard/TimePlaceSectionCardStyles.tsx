@@ -2,12 +2,12 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   textPlace: {
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14,
   },
   containerComponent: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 10,
+    paddingTop: 5,
   },
 });
 

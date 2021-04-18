@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   containerMid: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingTop: 10,
+    //paddingTop: 10,
     paddingBottom: 20,
     paddingLeft: 20,
     paddingHorizontal: 20,

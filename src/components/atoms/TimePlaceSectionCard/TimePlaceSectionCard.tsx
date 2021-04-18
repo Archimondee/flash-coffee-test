@@ -11,11 +11,17 @@ interface TimePlaceSectionCardProps {
 const TimePlaceSectionCard = (props: TimePlaceSectionCardProps) => {
   const {text, timeBefore, timeAfter} = props;
   return (
-    <View style={{padding: 20}}>
+    <View
+      style={{
+        paddingRight: 40,
+        paddingTop: 20,
+        paddingBottom: 10,
+        paddingLeft: 20,
+      }}>
       <Text style={styles.textPlace}>{text}</Text>
       <View style={styles.containerComponent}>
-        <Icon name="clock-time-four-outline" size={30} color="black" />
-        <Text style={{fontSize: 14, paddingLeft: 10}}>
+        <Icon name="clock-time-four-outline" size={24} color="black" />
+        <Text style={{fontSize: 12, paddingLeft: 10}}>
           {timeBefore} - {timeAfter}
         </Text>
       </View>
