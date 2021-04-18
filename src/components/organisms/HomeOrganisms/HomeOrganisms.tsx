@@ -10,16 +10,21 @@ import {Schedule} from 'src/types/DataTypes';
 
 interface HomeOrganismsProps {
   dataSchedule: Schedule[];
+  gotoSchedule: () => void;
 }
 
 const HomeOrganisms = (props: HomeOrganismsProps) => {
-  const {dataSchedule} = props;
+  const {dataSchedule, gotoSchedule} = props;
   return (
     <View>
       <HomeHeaderSection />
       <SectionLabel leftText={`Today's Schedule`} rightText={'Refresh'} />
       <HomeCard />
-      <SectionLabel leftText={`Next Schedule`} rightText={'See all'} />
+      <SectionLabel
+        leftText={`Next Schedule`}
+        rightText={'See all'}
+        onPress={gotoSchedule}
+      />
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {dataSchedule.map((item, index) => {
           return (

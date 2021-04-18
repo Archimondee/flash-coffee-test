@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import globalStyles from 'styles/globalStyles';
+import NavigationService from 'utils/NavigationService';
 
 interface HomeScreenProps {}
 
@@ -30,6 +31,10 @@ const HomeScreen = (props: HomeScreenProps) => {
       date: '9 Apr',
     },
   ];
+
+  const gotoSchedule = () => {
+    NavigationService.navigate('ScheduleScreen');
+  };
   return (
     <SafeAreaView style={[globalStyles().container]}>
       <StatusBar backgroundColor={'#fbdd07'} />
@@ -39,7 +44,7 @@ const HomeScreen = (props: HomeScreenProps) => {
           backgroundColor: 'white',
           marginBottom: -40,
         }}>
-        <HomeOrganisms dataSchedule={schedule} />
+        <HomeOrganisms dataSchedule={schedule} gotoSchedule={gotoSchedule} />
       </ScrollView>
     </SafeAreaView>
   );
