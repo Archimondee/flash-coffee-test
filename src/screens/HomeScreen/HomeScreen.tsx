@@ -30,6 +30,10 @@ const HomeScreen = (props: HomeScreenProps) => {
       day: 'Friday',
       date: '9 Apr',
     },
+    {
+      day: 'Saturday',
+      date: '9 Apr',
+    },
   ];
 
   const gotoSchedule = () => {
@@ -51,10 +55,3 @@ const HomeScreen = (props: HomeScreenProps) => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'red',
-  },
-});
