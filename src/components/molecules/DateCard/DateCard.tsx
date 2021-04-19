@@ -1,6 +1,6 @@
 import TimePlaceSectionCard from 'components/atoms/TimePlaceSectionCard/TimePlaceSectionCard';
 import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import styles from './DateCardStyles';
 interface DateCardProps {
   day: string;
@@ -9,24 +9,28 @@ interface DateCardProps {
   year: string;
   place: string;
   isToday: boolean;
+  onPress: (title: string) => void;
 }
 
 const DateCard = (props: DateCardProps) => {
-  const {day, date, place, isToday} = props;
+  const {day, date, place, isToday, onPress, month, year} = props;
+  let title = date + ' ' + month + ' ' + year;
   return place !== '' ? (
     <View style={styles().container}>
       <View style={styles().containerDate}>
         <Text style={styles().textDay}>{day}</Text>
         <Text style={styles(day).textDate}>{date}</Text>
       </View>
-      <View style={{flex: 6, backgroundColor: '#f4f4f4', borderRadius: 5}}>
+      <TouchableOpacity
+        onPress={() => onPress(title)}
+        style={{flex: 6, backgroundColor: '#f4f4f4', borderRadius: 5}}>
         <TimePlaceSectionCard
           isToday={isToday}
           text={place}
           timeAfter={'17:00'}
           timeBefore={'08:00'}
         />
-      </View>
+      </TouchableOpacity>
     </View>
   ) : (
     <View style={styles().container}>

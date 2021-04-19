@@ -5,6 +5,7 @@ import {Text, View, StyleSheet, ScrollView, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {UpcomingScheduleType} from 'src/types/DataTypes';
 import globalStyles from 'styles/globalStyles';
+import NavigationService from 'utils/NavigationService';
 interface ScheduleScreenProps {}
 
 const ScheduleScreen = (props: ScheduleScreenProps) => {
@@ -66,6 +67,10 @@ const ScheduleScreen = (props: ScheduleScreenProps) => {
       isToday: false,
     },
   ];
+
+  const gotoScheduleDetail = (title: string) => {
+    NavigationService.navigate('ScheduleDetailScreen', {title: title});
+  };
   return (
     <View style={[globalStyles('white').container]}>
       <View
@@ -73,7 +78,7 @@ const ScheduleScreen = (props: ScheduleScreenProps) => {
           backgroundColor: 'white',
           flex: 1,
         }}>
-        <ScheduleList data={data} />
+        <ScheduleList data={data} onPress={gotoScheduleDetail} />
       </View>
     </View>
   );

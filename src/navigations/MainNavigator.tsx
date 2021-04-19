@@ -11,6 +11,7 @@ import {Button, Alert, TouchableOpacity, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import NavigationService from 'utils/NavigationService';
+import ScheduleDetailScreen from 'screens/ScheduleDetailScreen/ScheduleDetailScreen';
 
 const Main = createStackNavigator<RootStackParamList>();
 
@@ -60,6 +61,24 @@ const MainNavigator = () => {
             </TouchableOpacity>
           ),
         }}
+      />
+      <Main.Screen
+        name="ScheduleDetailScreen"
+        component={ScheduleDetailScreen}
+        options={({navigation, route}) => ({
+          headerStyle: {backgroundColor: '#fbdd07'},
+          headerLeft: () => (
+            <TouchableOpacity
+              style={{paddingLeft: 25}}
+              onPress={NavigationService.back}>
+              <MaterialIcons
+                name="keyboard-backspace"
+                size={25}
+                color="black"
+              />
+            </TouchableOpacity>
+          ),
+        })}
       />
     </Main.Navigator>
   );
