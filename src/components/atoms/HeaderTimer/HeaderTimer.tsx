@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import styles from './HeaderTimerStyles';
 
 interface HeaderTimerProps {}
