@@ -4,7 +4,7 @@ import styles from './SectionLabelStyles';
 
 interface SectionLabelProps {
   leftText: string;
-  rightText: string;
+  rightText?: string;
   onPress?: () => void;
 }
 
@@ -13,9 +13,13 @@ const SectionLabel = (props: SectionLabelProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.leftText}>{leftText}</Text>
-      <TouchableOpacity onPress={onPress}>
-        <Text style={styles.rightText}> {rightText} </Text>
-      </TouchableOpacity>
+      {rightText ? (
+        <TouchableOpacity onPress={onPress}>
+          <Text style={styles.rightText}> {rightText} </Text>
+        </TouchableOpacity>
+      ) : (
+        <View />
+      )}
     </View>
   );
 };

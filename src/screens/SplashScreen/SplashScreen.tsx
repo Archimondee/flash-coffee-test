@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
-import {Text, View, StyleSheet, SafeAreaView} from 'react-native';
+import {Text, View, StyleSheet, SafeAreaView, Image} from 'react-native';
+import globalStyles from 'styles/globalStyles';
 import NavigationService from 'utils/NavigationService';
 import styles from './SplashScreenStyles';
 
@@ -12,8 +13,11 @@ const SplashScreen = (props: SplashScreenProps) => {
     }, 2000);
   }, []);
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>SplashScreen</Text>
+    <SafeAreaView style={[globalStyles().container, styles.container]}>
+      <Image
+        source={require('../../assets/logo.png')}
+        style={{height: 300, width: 300}}
+      />
     </SafeAreaView>
   );
 };

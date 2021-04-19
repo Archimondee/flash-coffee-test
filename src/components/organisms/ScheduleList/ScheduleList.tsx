@@ -4,16 +4,17 @@ import {Text, View, StyleSheet, FlatList} from 'react-native';
 import {UpcomingScheduleType} from 'src/types/DataTypes';
 interface ScheduleListProps {
   data: UpcomingScheduleType[];
+  onPress: (args1: string) => void;
 }
 
 const ScheduleList = (props: ScheduleListProps) => {
-  const {data} = props;
+  const {data, onPress} = props;
   return (
     <FlatList
       data={data}
       scrollEnabled={true}
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{paddingHorizontal: 20}}
+      contentContainerStyle={{paddingHorizontal: 20, paddingBottom: 40}}
       ListHeaderComponent={() => {
         return (
           <Text
@@ -30,6 +31,7 @@ const ScheduleList = (props: ScheduleListProps) => {
       renderItem={({item}) => {
         return (
           <DateCard
+            onPress={onPress}
             date={item.date}
             day={item.day}
             month={item.month}
