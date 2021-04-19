@@ -6,24 +6,26 @@ interface TimePlaceSectionCardProps {
   text: string;
   timeBefore: string;
   timeAfter: string;
+  isToday?: boolean;
 }
 
 const TimePlaceSectionCard = (props: TimePlaceSectionCardProps) => {
-  const {text, timeBefore, timeAfter} = props;
+  const {text, timeBefore, timeAfter, isToday} = props;
   return (
-    <View
-      style={{
-        paddingRight: 40,
-        paddingTop: 20,
-        paddingBottom: 10,
-        paddingLeft: 20,
-      }}>
+    <View style={styles.container}>
       <Text style={styles.textPlace}>{text}</Text>
       <View style={styles.containerComponent}>
         <Icon name="clock-time-four-outline" size={24} color="black" />
         <Text style={{fontSize: 12, paddingLeft: 10}}>
           {timeBefore} - {timeAfter}
         </Text>
+        {isToday ? (
+          <View style={styles.containerToday}>
+            <Text style={{fontSize: 12, color: 'white'}}>TODAY</Text>
+          </View>
+        ) : (
+          <View />
+        )}
       </View>
     </View>
   );
